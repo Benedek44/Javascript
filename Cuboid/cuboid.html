@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Enter the sides of the cuboid:</h1>
-    <form  onsubmit="return Calculate(event)">
+    <form  onsubmit="return Calculate(event)" id="form">
         <label for="Length">Length:</label>
         <input id="Length" name="Length" required><br><br>
         
@@ -17,7 +17,8 @@
         <label for="Height">Height:</label>
         <input id="Height" name="Height" required><br><br>
 
-        <button type="submit">Submit</button>
+        <button type="submit" id="submitBtn">Submit</button>
+        <button type="button" onclick="resetForm()">Refresh</button>
     </form>
 
     <p id="Surface"></p>

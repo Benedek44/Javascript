@@ -13,4 +13,13 @@ function Calculate(event)
         isItLeapYear = "Not a leap year";
 
     document.getElementById("leapYear").innerText = `The year is: ${isItLeapYear}`;
+    document.getElementById('submitBtn').disabled = true;
+}
+
+function resetForm() {
+    document.getElementById('form').reset();
+
+    document.getElementById('submitBtn').disabled = false;
+
+    document.getElementById('leapYear').textContent = '';
 }

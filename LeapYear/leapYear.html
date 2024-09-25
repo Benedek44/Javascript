@@ -7,11 +7,12 @@
 </head>
 <body>
     <h1>Enter a year to check:</h1>
-    <form  onsubmit="return Calculate(event)">
+    <form  onsubmit="return Calculate(event)" id="form">
         <label for="Year">Year:</label>
         <input id="Year" name="Year" required><br><br>
 
-        <button type="submit">Submit</button>
+        <button type="submit" id="submitBtn">Submit</button>
+        <button type="button" onclick="resetForm()">Refresh</button>
     </form>
 
     <p id="leapYear"></p>

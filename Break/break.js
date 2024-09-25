@@ -5,7 +5,11 @@ function Calculate(event)
 
     for (let i = 0; i < word.length; i++)
     {
-        document.getElementById("result").innerHTML += `${word.charAt(i)} <br>`;
+        let char = word.charCodeAt(i);
+        if ((char >= 65 && char < 91) || (char >= 97 && char < 123))
+            document.getElementById("result").innerHTML += `${word.charAt(i)} <br>`;
+        else
+            break;
     }
     document.getElementById('submitBtn').disabled = true;
 }

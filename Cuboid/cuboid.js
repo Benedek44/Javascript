@@ -10,4 +10,14 @@ function Calculate(event)
 
     document.getElementById("Surface").innerText = `Surface Area: ${surface}`;
     document.getElementById("Volume").innerText = `Volume: ${volume}`;
+    document.getElementById('submitBtn').disabled = true;
+}
+
+function resetForm() {
+    document.getElementById('form').reset();
+
+    document.getElementById('submitBtn').disabled = false;
+
+    document.getElementById('Surface').textContent = '';
+    document.getElementById('Volume').textContent = '';
 }

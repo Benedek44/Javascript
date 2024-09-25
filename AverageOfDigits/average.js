@@ -11,4 +11,13 @@ function Calculate(event)
         average += parseInt(number.toString().charAt(i));
     }
     document.getElementById("result").innerHTML += `The average of digits is: ${average / numberLength} <br>`;
+    document.getElementById('submitBtn').disabled = true;
+}
+
+function resetForm() {
+    document.getElementById('form').reset();
+
+    document.getElementById('submitBtn').disabled = false;
+
+    document.getElementById('result').textContent = '';
 }
