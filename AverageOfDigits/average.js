@@ -4,13 +4,12 @@ function Calculate(event)
     const number = document.getElementById("Number").value;
 
     let average = 0;
-    let numberLength = number.toString().length;
 
-    for (let i = 0; i < numberLength; i++)
+    for (let i = 0; i < number.length; i++)
     {
         average += parseInt(number.charAt(i));
     }
-    document.getElementById("result").innerHTML += `The average of digits is: ${average / numberLength} <br>`;
+    document.getElementById("result").innerHTML += `The average of digits is: ${average / number.length} <br>`;
     document.getElementById('submitBtn').disabled = true;
 }
 
